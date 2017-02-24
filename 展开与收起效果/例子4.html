@@ -1,0 +1,96 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="jquery-1.12.2.min.js"></script>
+<title></title>
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		line-height: 180%;
+		font-size:62.5%;
+		background: #fff;
+	}
+	div#pn{
+		margin: 0 auto;
+		height: auto;
+		width: 60%;
+		font-size: 1.3em;
+		background: #eeeded;
+		padding: 5px;
+	}
+	div#pn div#art0{
+		background: #fcdada;
+	}
+	.title{
+		font-size: 1.4em;
+		font-weight: bold;
+	}
+	.source{
+		color: #ccc;
+	}
+	
+	div#content{
+		border: 1px solid #666;
+		display: none;
+	}
+	div#tail{
+		width: 70px;
+		position: relative;
+		left:750px;
+	}
+
+</style>
+<script >
+function showdiv(obj){
+	var x=obj.parentNode;
+	var y=x.nextSibling;
+	if(y.nodeType!=1){
+		y=y.nextSibling;
+	}
+	x.style.display="none";
+	y.style.display="block";
+};
+function hidediv(obj){
+	var y=obj.parentNode.parentNode;
+	var x=y.previousSibling;
+	if(x.nodeType!=1){
+		x=x.nextSibling;
+	}
+	x.style.display="block";
+	y.style.display="none";
+};
+
+
+	
+</script>
+</head>
+<body>
+<div id="pn">
+	<div id="art0">
+		<p class="title">英国乔治小王子或就读其父威廉母校</p>
+		<p class="source">2016年03月28日 13:45　来源：中国新闻网</p>
+		<p class="pm">乔治小王子或将于明年入读韦瑟比预备学校，这是威廉的母校，巴巴爸爸爸爸爸爸爸爸爸爸乔治小王子或将于明年入读韦瑟比预备学校，这是威廉的母校，巴廉的母校，巴巴爸爸爸爸爸爸爸爸爸爸乔治小王子或将于明年入读韦瑟比预备学校，这是威廉的母校，巴巴爸爸爸爸爸爸爸爸爸爸
+		<a href="#" onclick="showdiv(this)">全文...</a>
+		</p>
+		
+		<div id="content" >
+			<div class="content1" >
+			　中新网3月28日电 据香港《文汇报》28日报道，英国小王子乔治已获登记，或将于明年入读其父威廉王子的母校韦瑟比预备学校。
+			　　英国威廉王子夫妇的官方住所虽然是伦敦肯辛顿宫，但他们近年常留在诺福克郡的安默尔庄园，看中该处环境僻静，可专心照顾乔治王子及夏洛特公主。
+			　　不过有消息称，乔治已获登记明年入读父亲及叔叔哈里王子的母校韦瑟比预备学校，意味威廉王子夫妇可能将迁居伦敦，为年长的英女王分担公务。
+			　　韦瑟比预备学校距离肯辛顿宫约1公里，每学期学费6500英镑。威廉夫人凯特2014年曾花450万英镑翻新肯辛顿宫，令外界预期威廉一家即将搬入。
+			中新网3月28日电 据香港《文汇报》28日报道，英国小王子乔治已获登记，或将于明年入读其父威廉王子的母校韦瑟比预备学校。
+			　　英国威廉王子夫妇的官方住所虽然是伦敦肯辛顿宫，但他们近年常留在诺福克郡的安默尔庄园，看中该处环境僻静，可专心照顾乔治王子及夏洛特公主。
+			　　不过有消息称，乔治已获登记明年入读父亲及叔叔哈里王子的母校韦瑟比预备学校，意味威廉王子夫妇可能将迁居伦敦，为年长的英女王分担公务。
+			　　韦瑟比预备学校距离肯辛顿宫约1公里，每学期学费6500英镑。威廉夫人凯特2014年曾花450万英镑翻新肯辛顿宫，令外界预期威廉一家即将搬入。
+			</div>
+			<div id="tail">
+				<a href="#" onclick="hidediv(this)">收起全文</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

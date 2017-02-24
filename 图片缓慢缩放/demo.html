@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+	img{
+		width: 150px;
+		height:200px;
+
+	}
+	
+</style>
+<script type="text/javascript">
+function getDom(id){
+	return document.getElementById(id);
+}
+
+window.onload=function(){
+	var oImg=getDom("img1");
+	var oBtn1=getDom("btn1");
+	var oBtn2=getDom("btn2");
+
+	var maxWidth=oImg.offsetWidth*2;
+	var maxHeight=oImg.offsetHeight*2;
+	var minWidth=oImg.offsetWidth*0.5;
+	var minHeight=oImg.offsetHeight*0.5;
+
+	oBtn1.onclick=function(){
+		maxFun();
+	}
+	oBtn2.onclick=function(){
+		minFun();
+	}
+
+	function maxFun(){
+		var endWidth=oImg.offsetWidth*1.3;
+		var endHeight=oImg.offsetHeight*1.3;
+		var maxTimer=setInterval(function(){
+			if(oImg.offsetHeight<maxHeight && oImg.offsetHeight<endHeight){
+				oImg.style.width=oImg.offsetWidth*1.05+"px";
+				oImg.style.height=oImg.offsetHeight*1.05+"px";
+			}
+			else{
+				clearInterval(maxTimer);
+			}
+		},20)
+	}
+
+	function minFun(){
+		var endWidth=oImg.offsetWidth*0.75;
+		var endHeight=oImg.offsetHeight*0.75;
+		var minTimer=setInterval(function(){
+			if(oImg.offsetHeight>minHeight && oImg.offsetHeight>endHeight){
+				oImg.style.width=oImg.offsetWidth*0.95+"px";
+				oImg.style.height=oImg.offsetHeight*0.95+"px";
+			}
+			else{
+				clearInterval(minTimer);
+			}
+		},20)
+	}
+
+
+}
+</script>
+</head>
+<body >
+<img id="img1" src="a.jpg"/>
+<div id="div1">
+	<button id="btn1">放大</button>
+	<button id="btn2">缩小</button>
+</div>
+
+</body>
+</html>

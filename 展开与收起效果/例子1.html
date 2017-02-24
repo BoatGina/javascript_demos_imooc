@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>点击展开</title>
+<style type="text/css">
+	body{
+		margin:0;
+		padding: 0;
+		font-size: 14px;
+	}
+	#whole{
+		width: 400px;
+		background: #eee;
+		margin: 0 auto;
+	}
+	#third{
+		border-top: 2px solid black;
+		margin: 0 auto;
+		background: #fff;
+		
+	}
+	#add{
+		width: 100px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		background: #666;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+</style>
+<script >
+window.onload=function(){
+	var oP=document.getElementById("add");
+	var oDiv2=document.getElementById("second");
+
+	oP.onclick=function(){
+		if(oDiv2.style.display=="block"){
+			oDiv2.style.display="none";
+			oP.innerHTML="展开内容+";
+		}
+		else{
+			oDiv2.style.display="block";
+			oP.innerHTML="收起-";
+		}
+	}
+}
+</script>
+</head>
+<body>
+<div id="whole">
+	<div id="first" >
+		<p>one:..............</p>
+		<p>two:..............</p>
+	</div>
+	<div id="second" style="display:none;">
+		<p>three:............</p>
+		<p>four:.............</p>
+	</div>
+	<div id="third">
+		<p id="add">展开内容+</p>
+	</div>
+</div>
+</body>
+</html>

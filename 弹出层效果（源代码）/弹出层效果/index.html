@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>跑跑卡丁车</title>
+<link rel="stylesheet" type="text/css" href="style/basic.css" />
+<style type="text/css">
+	#mask{
+		background: black;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0.75;
+		filter:alpha(opacity=75);
+		height: 100%;
+		width: 100%;
+		z-index: 0;
+	}
+	#login02{
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 1;
+	}
+	.loginclass{
+		position: relative;
+		width: 300px;
+		height: 300px;
+		background: green;
+	}
+	#btnclose01{
+		background: red;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		cursor: pointer;
+	}
+
+</style>
+<script type="text/javascript">
+function openNew(){
+	var oMask=document.createElement("div");
+	var oLogin=document.createElement("div");
+	var SHeight=document.documentElement.scrollHeight;
+	var SWidth=document.documentElement.scrollWidth;
+	var oHeight=document.documentElement.clientHeight;
+
+	oMask.id="mask";
+	oMask.style.height=SHeight+"px";
+	oMask.style.width=SWidth+"px";
+
+	oLogin.id="login02";
+	oLogin.innerHTML="<div class='loginclass' ><button id='btnclose01'>close</button></div>";
+	var dHeight=oLogin.offsetHeight;
+	var dWidth=oLogin.offsetWidth;
+	//为什么是0？？？？
+	oLogin.style.left=(SWidth-dWidth)/2+"px";
+	oLogin.style.top=(oHeight-dHeight)/2+"px";
+
+	document.body.appendChild(oMask);
+	document.body.appendChild(oLogin);
+
+	var oClose=document.getElementById("btnclose01");
+	oClose.onclick=oMask.onclick=function(){
+		document.body.removeChild(oMask);
+		document.body.removeChild(oLogin);
+	};
+}
+
+window.onload=function(){
+	var oBtn=document.getElementById("btn");
+	oBtn.onclick=function(){
+		openNew();
+	};
+}
+</script>
+</head>
+<body>
+<div id="header">
+	<div id="logo"><a href="###">太平洋游戏网</a></div>
+	<div id="login">
+		<input type="text" class="text" />
+		<input type="password" class="text" />
+		<input id="btn" type="button" class="button" value="登陆" />
+		<input type="button" class="button" value="注册" />
+	</div>
+	<div id="leader">
+	<div id="inside"><a href="###">太平洋电脑网</a> | <a href="###">太平洋汽车网 </a>| <a href="###">太平洋女性网 </a>|<a href="###"> 太平洋亲子网 </a>|<a href="###"> PC购物网</a><a href="###" id="end"> 网站地图</a>
+	</div>
+	</div>
+	<div id="supnav">
+		<ul>
+			<li class="index"><a href="#">首页</a></li>
+			<li><a href="#">新游试玩</a></li>
+			<li><a href="#">网络游戏</a></li>
+			<li><a href="#">电脑游戏</a></li>
+			<li><a href="#">电视游戏</a></li>
+			<li><a href="#">电子竞技</a></li>
+			<li><a href="#">网页游戏</a></li>
+			<li><a href="#">游戏硬件</a></li>
+			<li><a href="#">在线动漫</a></li>
+			<li><a href="#">游戏下载</a></li>
+			<li class="end"><a href="#">网站活动</a></li>
+		</ul>	
+	</div>
+	<div id="subnav">
+		<ul>
+			<li><a href="#">美眉频道</a></li>
+			<li><a href="#">游戏视频</a></li>
+			<li><a href="#">美女图库</a></li>
+			<li><a href="#">J客部落</a></li>
+			<li><a href="#">公会联盟</a></li>
+			<li><a href="#">互动社区</a></li>
+			<li><a href="#">查找游戏</a></li>
+			<li><a href="#">游戏产业</a></li>
+			<li><a href="#">迷你游戏</a></li>			
+		</ul>
+	</div>
+</div>
+
+<div id="wrap">
+	<img src="images/paopao_2.jpg" />
+	<img src="images/paopao_3.jpg" />
+	<img src="images/paopao_4.jpg" />
+	<img src="images/paopao_5.jpg" />
+	<img src="images/paopao_6.jpg" />
+	<img src="images/paopao_7.jpg" />
+	<img src="images/paopao_8.jpg" />
+	<img src="images/paopao_9.jpg" />
+	<img src="images/paopao_10.jpg" />
+	<img src="images/paopao_11.jpg" />
+</div>
+
+<div id="nav">
+	<img src="images/paopao_13.jpg" />
+	<ul>
+		<li><a href="#">跑跑卡丁车</a> | </li>
+		<li><a href="#">游戏下载</a> | </li>
+		<li><a href="#">游戏介绍</a> | </li>
+		<li><a href="#">游戏驾考</a> | </li>
+		<li><a href="#">赛车评测</a> | </li>
+		<li><a href="#">赛道攻略</a> | </li>
+		<li><a href="#">竞速经验</a> | </li>
+		<li><a href="#">道具经验</a> | </li>
+		<li><a href="#">游戏技巧</a> | </li>
+		<li><a href="#">视频下载</a> | </li>
+		<li><a href="#">壁纸素材</a></li>
+	</ul>	
+	<ul class="bottom">
+		<li><a href="#" class="hot">收藏本站</a> | </li>
+		<li><a href="#" class="hot">视频中心</a> | </li>
+		<li><a href="#" class="hot">火爆论坛</a> | </li>
+		<li><a href="#">每周更新</a> | </li>
+		<li><a href="#">每日话题</a> | </li>
+		<li><a href="#">原创专栏</a> | </li>
+		<li><a href="#">竞技资讯</a> | </li>
+		<li><a href="#">在线交流</a> | </li>
+		<li><a href="#">美女明星</a> | </li>
+		<li><a href="#">官方新闻</a> | </li>
+		<li><a href="#">游戏八卦</a></li>
+	</ul>
+</div>
+
+<div id="content">
+
+	<div id="topic">
+		<h1>
+			<a href="###">更多</a>
+		</h1>
+		<div id="topiccontent">
+			<dl>
+				<dt><img src="images/topic.jpg" /></dt>
+				<dd><span>调查本周的更新你是否满意</span><br/>
+				<p>官方再次更新，外挂再现、跑跑K1锦标赛进入收官阶段，圣诞更新缺没有出现只言片语有关这些的渲染，还是如往年一般的更新，那…… </p></dd>
+
+			</dl>
+		</div>
+	</div>
+	<div id="star">
+		<h1>
+			<a href="###">更多</a>
+		</h1>
+		<div id="starcontent">
+			<dl>
+				<dt><img src="images/star.jpg" /></dt>
+				<dd><span>K1专访系列之4Tclub丨严欢</span><br/>
+				<p>在4T就是和以前老队友一起，大侠，小D他们，全段时间在纵横，也还行吧，虽然那时候因为些事情去了纵横，但和4T的一些人还是……</p></dd>
+
+			</dl>
+		</div>
+	</div>
+	<div id="update">
+		<h1>
+			<a href="###">更多</a>
+		</h1>
+		<div id="updatecontent">
+			<dl>
+				<dt><img src="images/update.jpg" /></dt>
+				<dd><span>12月18日独家国服更新点评</span><br/>
+				<p>真的感觉时间过得很快，就这么又过了一个星期。今天又是官方更新的时间，所以野草又跑来跟大家扯两句了。这个星期由于外挂的…… </p></dd>
+
+			</dl>
+		</div>
+	</div>
+	<div id="adv">
+
+	</div>	
+	<div id="focu">
+		<h1></h1>
+		<div id="focucontents">
+			<dl>
+				<dt>
+					<p>12月18日独家国服更新点评 官方的心思？</p>
+					<a href="###">跑跑卡丁车客户端下载</a> | <a href="###">2008跑跑K1锦标赛频道</a>
+				</dt>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+				<dd><a href="###">点评2008K1总决赛名单(吉林名额取消)</a>  <strong>[12-20]</strong></dd>
+
+
+
+			</dl>
+		</div>
+	</div>
+	<div id="data">
+		<h1>常用资料</h1>
+		<div id="datacontents">
+			<ul>
+			    <li>驾考：<strong>新手、初级、L3、L2、L1</strong></li>
+			    <li> 更新：<strong>国服、韩服、台服</strong></li>
+			    <li> 注册教程：<strong>韩服、台服、泰服</strong></li>
+			    <li> 技巧：<strong>赛道、文字教程、视频教程</strong></li>
+			</ul>
+		</div>
+	</div>
+	<div id="da">
+		<img src="images/paopao_38.jpg" />
+		<img src="images/paopao_50.jpg" />
+	</div>
+	<div id="tyro">
+		<h1></h1>
+		<div id="tyrocontents">
+			<ul>
+			    <li><a href="###">游戏介绍</a> | <a href="###">游戏下载</a>  | <a href="###">注册安装</a> </li>
+			    <li><a href="###">游戏介绍</a> | <a href="###">游戏下载</a>  | <a href="###">注册安装</a> </li>
+			    <li><a href="###">游戏介绍</a> | <a href="###">游戏下载</a>  | <a href="###">注册安装</a> </li>
+			    <li><a href="###">游戏介绍</a> | <a href="###">游戏下载</a>  | <a href="###">注册安装</a> </li>
+			</ul>
+		</div>
+	</div>
+	<div id="vc">
+		<img src="images/paopao_vc.jpg" />
+	</div>
+
+	<div id="video1">
+		<h1>
+			<a href="###" class="a"></a><a href="###" class="b"></a>
+		</h1>
+		<ul>
+			<li><a href="#">评测</a> | </li>
+			<li><a href="#">比赛</a> | </li>
+			<li><a href="#">韩服</a> | </li>
+			<li><a href="#">城镇</a> | </li>
+			<li><a href="#">森林</a> | </li>
+			<li><a href="#">冰河</a> | </li>
+			<li><a href="#">沙漠</a> | </li>
+			<li><a href="#">墓地</a> | </li>
+			<li><a href="#">矿山</a> | </li>
+			<li><a href="#">工厂</a> | </li>
+			<li><a href="#">太空</a> | </li>
+			<li><a href="#">黄金</a> | </li>
+			<li><a href="#">龙行华夏</a></li>
+		</ul>
+		<div>
+			<dl>
+				<dt><img src="images/v1.jpg" /></dt>
+				<dd><br/>月雪王子出品《Forever young 》</dd>
+			</dl>
+			<dl>
+				<dt><img src="images/v1.jpg" /></dt>
+				<dd><br/>月雪王子出品《Forever young 》</dd>
+			</dl>
+			<dl>
+				<dt><img src="images/v1.jpg" /></dt>
+				<dd><br/>月雪王子出品《Forever young 》</dd>
+			</dl>
+			<dl>
+				<dt><img src="images/v1.jpg" /></dt>
+				<dd><br/>月雪王子出品《Forever young 》</dd>
+			</dl>
+			<span>中间间距</span>
+			<dl>
+				<dt><img src="images/v1.jpg" /></dt>
+				<dd><br/>月雪王子出品《Forever young 》</dd>
+			</dl>
+			<dl>
+				<dt><img src="images/v1.jpg" /></dt>
+				<dd><br/>月雪王子出品《Forever young 》</dd>
+			</dl>
+			<dl>
+				<dt><img src="images/v1.jpg" /></dt>
+				<dd><br/>月雪王子出品《Forever young 》</dd>
+			</dl>
+			<dl>
+				<dt><img src="images/v1.jpg" /></dt>
+				<dd><br/>月雪王子出品《Forever young 》</dd>
+			</dl>
+		</div>
+	</div>
+	<div id="video2">
+		<h1></h1>
+		<div ><img src="images/channel1.jpg" id="video2img1" /></div>
+		<div ><img src="images/channel2.jpg" id="video2img2" /></div>
+		<div ><img src="images/channel3.jpg" id="video2img3" /></div>
+	</div>
+	<div id="video3">
+		<h1><a href="###">更多</a></h1>
+		<div>
+			<dl>
+				<dt><img src="images/ath.jpg"></dt>
+				<dd>
+					<strong>2008年跑跑K1锦标赛频道</strong>
+					太平洋游戏网跑跑卡丁车K1频道，官方2008年K1锦标赛合作频道。在我们这里，…… 
+				</dd>
+			</dl>
+			<ul>
+				<li><em>[12-02]</em><a href="#">K1省决赛临近尾声,报出打架事件</a></li> 
+				<li><em>[12-12]</em><a href="#">跑阿婆12月7日、9日包头、贵阳K1战报</a></li>
+				<li><em>[12-03]</em><a href="#">关于K1吉林省级决赛打架事件</a> </li>
+				<li><em>[11-11]</em><a href="#">强队小动作不断意欲剑指何方</a> </li>
+				<li><em>[12-12]</em><a href="#">跑跑卡丁车12月8日内蒙古K1海选</a> </li>
+				<li><em>[11-15]</em><a href="#">深度对话-职业队为何走想灭亡</a> </li>
+				<li><em>[11-15]</em><a href="#">纵横丨丶陈泽破小风太空记录</a> </li>
+				<li><em>[12-03]</em><a href="#">是大家真的要注重修养和素质？</a> </li>
+			</ul>
+		</div>
+	</div>
+	<div id="video4">
+		<h1><a href="###">更多</a></h1>
+		<div>
+			
+		</div>
+	</div>
+	<div id="video5">
+		<h1><a href="###">更多</a></h1>
+		<div>
+			<img src="images/mm3.jpg" />
+			<img src="images/mm3.jpg" />
+			<img src="images/mm3.jpg" />
+			<img src="images/mm3.jpg" />
+			<img src="images/mm3.jpg" />
+			<img src="images/mm3.jpg" />
+		</div>
+	</div>
+
+	<div id="bbs">
+		<img src="images/bbsimg.jpg" /> 
+	</div>
+</div>
+
+<div id="footer">
+	<p>版权所有 © 太平洋游戏网 </p>
+</div>
+<!--
+<div id="mask"></div>
+
+<div id="login02">
+	<div class="loginclass">
+		<div id="close"></div>		
+	</div>
+</div>
+-->
+</body>
+</html>

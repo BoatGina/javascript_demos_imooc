@@ -1,0 +1,87 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>定时展开收起</title>
+<style type="text/css">
+	body{
+		margin: 0 auto;
+		padding: 0;
+		text-align: center;
+		font-size: 12px;
+	}
+	#div1{
+		margin: 0 auto;
+		width: 800px;
+		height: auto;
+		background: #eee;
+	}
+	#div2{
+		margin: 0 auto;
+		width: 800px;
+		height: 100px;
+		background: #ccc;
+		border-top: 2px solid black;
+
+	}
+</style>
+<script >
+var h=0;
+function show(){
+	
+	if(h<300){
+		h+=5;
+		document.getElementById("div1").style.height=h+"px";
+	}
+	else{
+		return;
+	}
+	setTimeout("show()",30);
+};
+function hidden(){
+	if(h>0){
+		h-=5;
+		document.getElementById("div1").style.height=h+"px";
+	}
+	else{
+		document.getElementById("div1").style.display="none";
+		return;
+
+	}
+	setTimeout("hidden()",30);
+};
+
+
+window.onload=function(){
+	/*setInterval(function(){
+		if(h<500){
+			display="block";
+			h+=5;
+			oDiv1.style.height=h+"px";
+		}
+		else{
+			setInterval(function(){
+				h-=5;
+				oDiv1.style.height=h+"px";
+			},30);
+			display="none";
+		}
+	},30);*/
+	
+	show();
+	setTimeout("hidden()",5000);
+}
+
+</script>
+</head>
+<body>
+<div id="div1">
+	<h1>广告产品：。。。</h1>
+	<h2>广告内容：。。。</h2>
+</div>
+<div id="div2">
+	<h1>正文：。。。。</h1>
+	<h2>balabalabalabalabalabalabala</h2>
+</div>
+</body>
+</html>

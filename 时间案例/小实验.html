@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script >
+window.onload=function(){
+	var myDate=new Date(2016,4,2);
+	var getTime01=myDate.getTime();//根据本地时间
+	//alert(getTime01);
+	var getTime02=Date.parse("5/2/2016");
+	//alert(getTime02);
+	var getTime03=Date.UTC(2016,4,2,12);
+	//alert(getTime03);
+	document.getElementById("div1").innerHTML="getTime01="+getTime01+"<br/>getTime02="+getTime02+"<br/>getTime03="+getTime03;
+	//2016.5.1    to   2016.5.2 noon 12:00
+	document.getElementById("div2").innerHTML="getTime01:"+parseInt(getTime01/1000/60/60)+"<br/>getTime02:"+parseInt(getTime02/1000/60/60)+"<br/>getTime03:"+parseInt(getTime03/1000/60/60);
+}
+	
+</script>
+<style type="text/css">
+	body{
+		background: #eee;
+		color: black;
+		font-size:62.5%;
+		line-height: bold;
+		line-height: 150%;
+		font-size: 1.5em;
+	}
+	#div1{
+		font-weight: bold;
+		line-height: 150%;
+		font-size: 1.5em;
+
+	}
+	#div2{
+		margin: 0 auto;
+	}
+</style>
+</head>
+<body>
+<div id="div1">
+</div>
+<div id="div2"></div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>必应搜索栏</title>
+<style type="text/css">
+	body{
+		padding: 0;
+		margin:0;
+		background: url("bg.jpg") no-repeat -200px;
+		width: 700px;
+		height:600px;
+		font-size:62.5%;
+	}
+	div#search{
+		position: absolute;
+		top: 150px;
+		left: 100px;
+	}
+	img#img01{
+		width: 110px;
+		height: 65px;
+		float: left;
+		padding: 10px;
+	}
+	div#search_contents{
+		width: 500px;
+		height: 40px;
+		position: relative;
+		background: #fff;
+		float: left;
+		margin-top: 18px;
+	}
+	div#search_contents input{
+		width:495px;
+		height: 30px;
+		line-height: 30px;
+		border: none;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		font-size: 1.4em;
+		float: left;
+		outline:none;
+	}
+	div#search_contents button{
+		background: url("search02.png") no-repeat;
+		border: 0;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 0;
+		left: 500px;
+		cursor: pointer;
+	}
+	div#search_suggest{
+		display:none;
+		
+	}
+	div#search_suggest ul{
+		list-style-type: none;
+		width: 500px;
+		padding: 0;
+		margin: 0;
+		background: #fff;
+	}
+	div#search_suggest ul li{
+		font-size: 1.3em;
+		padding: 10px;
+		cursor:pointer;
+	}
+	div#search_suggest ul li:hover{
+		border: 1px solid #999;
+		background: #ccc;
+		text-decoration: underline;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+	$("#search_contents").bind("keyup",function(){
+			//console.info();
+			var searchText=$("#search-input").val();
+			$.get("http://api.bing.com/qsonhs.aspx?q="+searchText,function(d){
+				//console.info(d);
+				
+				var d=d.AS.Results[0].Suggests;
+				var html='';
+				for(var i=0;i<d.length;i++){
+					html+='<li>'+d[i].Txt+'</li>';
+				}
+				$("#search-result").html(html);
+				$("#search_suggest").show().css({
+					top:$("#search_contents").offset().top+41,
+					left:$("#search_contents").offset().left,
+					position: "absolute",
+				});
+			},'json');
+		});
+
+	$(document).bind("click",function(){
+		$("#search_suggest").hide();
+	});//事件绑定
+	$(document).delegate("li","click",function(){
+		var keyword=$(this).text();
+		location.href="http://cn.bing.com/search?q="+keyword;
+	});//事件代理
+</script>
+</head>
+
+<body>
+<div id="search">
+	<img src="logo02.png" id="img01" />
+	<div id="search_contents">
+		<input type="text" name="content" id="search-input"></input>
+		<button id="btn"></button>
+	</div>
+</div>
+<div id="search_suggest" >
+	<ul id="search-result">
+		<li>第一个</li>
+		<li>第二个</li>
+		<li>第三个</li>
+		<li>第四个</li>
+	</ul>
+</div>
+</body>
+</html>

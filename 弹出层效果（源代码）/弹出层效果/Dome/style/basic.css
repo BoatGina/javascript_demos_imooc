@@ -1,0 +1,102 @@
+﻿*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 400px;
+	margin: 0 auto;
+}
+h1{
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+}
+#all{
+	width: 400px;
+	height: 410px;
+	margin: 0 auto;
+	background:url("../images/slice.gif") no-repeat -454px 50px; 
+}
+#all h2{
+	background:url("../images/slice.gif") no-repeat -454px -15px;
+	text-indent: -999px;
+	height: 47px;
+}
+#all div#right{
+	background:black;
+	width: 45px;
+	height: 23px;
+	position: relative;
+	top: -39px;
+	left: 345px;
+	text-align: center;
+	line-height: 23px;
+	background:black url("../images/slice.gif") no-repeat -798px -230px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}
+#all  div#contents{
+	width: 400px;
+	height: 350px;
+	background: #fff url("../images/slice.gif") no-repeat -32px -14px;
+}
+#all  div#contents div#head{
+	width: 373px;
+	height: 31px;
+	line-height: 31px;
+	background: url("../images/slice.gif") no-repeat -465px -90px;
+	position: relative;
+	top: -12px;
+	left:13px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+}
+#all  div#contents dl{
+	width: 137px;
+	height:152px;
+	background: url("../images/slice.gif") no-repeat -495px -170px;
+	margin: 0 auto; 
+}
+#all  div#contents dl dt{
+	width:122px ;
+	height:108px ;
+	background: black url("../images/slice.gif") no-repeat -658px -189px;
+	position: relative;
+	top: 7px;
+	left: 7px;
+	border: 1px solid lightblue;
+}
+#all  div#contents dl dt img{
+	width:122px ;
+	height:91px ;
+}
+#all  div#contents dl dd{
+	width: 122px;
+	position: relative;
+	top: 7px;
+	left: 7px;
+	font-size: 12px;
+	color: #fff;
+}
+#all  div#contents ul{
+	list-style-type: none;
+	font-size: 13px;
+	color: #666;
+	letter-spacing: 1px;
+	margin-left: 25px;
+	padding-top: 10px;
+}
+#all  div#contents ul li{
+
+	line-height: 160%;
+	background: url("../images/slice.gif")  -460px -140px;
+	padding-left: 10px;
+	border-bottom: 1px dotted #666;
+}
+#all  div#contents ul li span{
+	position: relative;
+	left: 90px;
+}
